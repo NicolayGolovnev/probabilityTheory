@@ -99,6 +99,14 @@ namespace Zaychik
 
                 dataGist[i] = dataPoligon[i] / Hx;
                 table.Rows[i].Cells[5].Value = dataGist[i];
+
+                //подсчитываем функцию распределения через сумму пред. Ni/N
+                if (i == 0) 
+                    table.Rows[i].Cells[6].Value = table.Rows[i].Cells[4].Value;
+                else
+                    table.Rows[i].Cells[6].Value = 
+                        Convert.ToDouble(table.Rows[i - 1].Cells[6].Value) 
+                        + Convert.ToDouble(table.Rows[i].Cells[4].Value);
             }
 
             //заполняем текст боксы

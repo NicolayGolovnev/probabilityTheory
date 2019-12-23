@@ -48,6 +48,10 @@
             this.textBox_r = new System.Windows.Forms.TextBox();
             this.textBox_Hx = new System.Windows.Forms.TextBox();
             this.textBox_extend = new System.Windows.Forms.TextBox();
+            this.button_graphics = new System.Windows.Forms.Button();
+            this.button_pointEstimates = new System.Windows.Forms.Button();
+            this.button_hypothesis = new System.Windows.Forms.Button();
+            this.button_confidenceIntervals = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -215,11 +219,51 @@
             this.textBox_extend.Size = new System.Drawing.Size(100, 26);
             this.textBox_extend.TabIndex = 13;
             // 
+            // button_graphics
+            // 
+            this.button_graphics.Location = new System.Drawing.Point(299, 367);
+            this.button_graphics.Name = "button_graphics";
+            this.button_graphics.Size = new System.Drawing.Size(103, 69);
+            this.button_graphics.TabIndex = 14;
+            this.button_graphics.Text = "Графики";
+            this.button_graphics.UseVisualStyleBackColor = true;
+            // 
+            // button_pointEstimates
+            // 
+            this.button_pointEstimates.Location = new System.Drawing.Point(424, 367);
+            this.button_pointEstimates.Name = "button_pointEstimates";
+            this.button_pointEstimates.Size = new System.Drawing.Size(103, 69);
+            this.button_pointEstimates.TabIndex = 15;
+            this.button_pointEstimates.Text = "Точечные оценки";
+            this.button_pointEstimates.UseVisualStyleBackColor = true;
+            // 
+            // button_hypothesis
+            // 
+            this.button_hypothesis.Location = new System.Drawing.Point(543, 367);
+            this.button_hypothesis.Name = "button_hypothesis";
+            this.button_hypothesis.Size = new System.Drawing.Size(103, 69);
+            this.button_hypothesis.TabIndex = 16;
+            this.button_hypothesis.Text = "Проверка гипотезы";
+            this.button_hypothesis.UseVisualStyleBackColor = true;
+            // 
+            // button_confidenceIntervals
+            // 
+            this.button_confidenceIntervals.Location = new System.Drawing.Point(672, 368);
+            this.button_confidenceIntervals.Name = "button_confidenceIntervals";
+            this.button_confidenceIntervals.Size = new System.Drawing.Size(147, 69);
+            this.button_confidenceIntervals.TabIndex = 17;
+            this.button_confidenceIntervals.Text = "Доверительные интервалы";
+            this.button_confidenceIntervals.UseVisualStyleBackColor = true;
+            // 
             // groupedRowX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 450);
+            this.ClientSize = new System.Drawing.Size(830, 450);
+            this.Controls.Add(this.button_confidenceIntervals);
+            this.Controls.Add(this.button_hypothesis);
+            this.Controls.Add(this.button_pointEstimates);
+            this.Controls.Add(this.button_graphics);
             this.Controls.Add(this.textBox_extend);
             this.Controls.Add(this.textBox_Hx);
             this.Controls.Add(this.textBox_r);
@@ -264,5 +308,9 @@
         private System.Windows.Forms.TextBox textBox_r;
         private System.Windows.Forms.TextBox textBox_Hx;
         private System.Windows.Forms.TextBox textBox_extend;
+        private System.Windows.Forms.Button button_graphics;
+        private System.Windows.Forms.Button button_pointEstimates;
+        private System.Windows.Forms.Button button_hypothesis;
+        private System.Windows.Forms.Button button_confidenceIntervals;
     }
 }
