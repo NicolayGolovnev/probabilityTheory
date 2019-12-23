@@ -1,6 +1,6 @@
 ﻿namespace Zaychik
 {
-    partial class groupedRowX
+    partial class groupedRowY
     {
         /// <summary>
         /// Required designer variable.

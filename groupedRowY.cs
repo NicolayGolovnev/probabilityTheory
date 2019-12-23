@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Zaychik
 {
-    public partial class groupedRowX : Form
+    public partial class groupedRowY : Form
     {
         public double[] database = new double[Program.N];
         public double[] dataPoligon = new double[Program.r];
@@ -19,7 +19,7 @@ namespace Zaychik
         public double[] dataFrequency = new double[Program.r];
         public int[] dataIntervals = new int[8];
         public double[] dataEmpiric = new double[Program.r];
-        public groupedRowX()
+        public groupedRowY()
         {
             InitializeComponent();
         }
@@ -28,6 +28,7 @@ namespace Zaychik
         {
             //заполняем таблицу
             double xMin = 1000, xMax = 0;
+            int yMin = 1000, yMax = 0;
 
             //max, min
             for (int i = 0; i < Program.N; i++)
@@ -130,7 +131,7 @@ namespace Zaychik
             //Для полигона - средние значения и dataPoligon
             //Для гистограммы - интервалы и dataGist
             //Для эмпирик функ - интервалы и dataEmpiric
-            Graphics grph = new Graphics(1, dataIntervals, dataPoligon, dataGist, dataAverage, dataEmpiric);
+            Graphics grph = new Graphics(dataIntervals, dataPoligon, dataGist, dataAverage, dataEmpiric);
             grph.ShowDialog();
         }
     }
