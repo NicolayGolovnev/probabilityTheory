@@ -100,7 +100,15 @@ namespace Zaychik
                 dataGist[i] = dataPoligon[i] / Hx;
                 table.Rows[i].Cells[5].Value = dataGist[i];
             }
-            
+
+            //заполняем текст боксы
+            textBox_Xmin.Text = String.Format("{0:0.00}", Convert.ToString(xMin));
+            textBox_Xmax.Text = String.Format("{0:0.00}", Convert.ToString(xMax));
+            textBox_Rx.Text = String.Format("{0:0.00}", Convert.ToString(Rx));
+            textBox_r.Text = String.Format("{0:0.00}", Convert.ToString(Program.r));
+            textBox_Hx.Text = String.Format("{0:0.00}", Convert.ToString(Hx));
+            textBox_extend.Text = String.Format("{0:0.00}", Convert.ToString(extendX));
+
         }
     }
 }

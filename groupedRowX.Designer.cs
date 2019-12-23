@@ -43,11 +43,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox_Xmin = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_Rx = new System.Windows.Forms.TextBox();
             this.textBox_Xmax = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox_r = new System.Windows.Forms.TextBox();
+            this.textBox_Hx = new System.Windows.Forms.TextBox();
+            this.textBox_extend = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -180,12 +180,12 @@
             this.textBox_Xmin.Size = new System.Drawing.Size(56, 26);
             this.textBox_Xmin.TabIndex = 7;
             // 
-            // textBox1
+            // textBox_Rx
             // 
-            this.textBox1.Location = new System.Drawing.Point(517, 280);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 9;
+            this.textBox_Rx.Location = new System.Drawing.Point(517, 280);
+            this.textBox_Rx.Name = "textBox_Rx";
+            this.textBox_Rx.Size = new System.Drawing.Size(100, 26);
+            this.textBox_Rx.TabIndex = 9;
             // 
             // textBox_Xmax
             // 
@@ -194,37 +194,37 @@
             this.textBox_Xmax.Size = new System.Drawing.Size(56, 26);
             this.textBox_Xmax.TabIndex = 10;
             // 
-            // textBox2
+            // textBox_r
             // 
-            this.textBox2.Location = new System.Drawing.Point(200, 322);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
-            this.textBox2.TabIndex = 11;
+            this.textBox_r.Location = new System.Drawing.Point(200, 322);
+            this.textBox_r.Name = "textBox_r";
+            this.textBox_r.Size = new System.Drawing.Size(100, 26);
+            this.textBox_r.TabIndex = 11;
             // 
-            // textBox3
+            // textBox_Hx
             // 
-            this.textBox3.Location = new System.Drawing.Point(517, 322);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 26);
-            this.textBox3.TabIndex = 12;
+            this.textBox_Hx.Location = new System.Drawing.Point(517, 322);
+            this.textBox_Hx.Name = "textBox_Hx";
+            this.textBox_Hx.Size = new System.Drawing.Size(100, 26);
+            this.textBox_Hx.TabIndex = 12;
             // 
-            // textBox4
+            // textBox_extend
             // 
-            this.textBox4.Location = new System.Drawing.Point(149, 388);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 26);
-            this.textBox4.TabIndex = 13;
+            this.textBox_extend.Location = new System.Drawing.Point(149, 388);
+            this.textBox_extend.Name = "textBox_extend";
+            this.textBox_extend.Size = new System.Drawing.Size(100, 26);
+            this.textBox_extend.TabIndex = 13;
             // 
             // groupedRowX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(920, 450);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox_extend);
+            this.Controls.Add(this.textBox_Hx);
+            this.Controls.Add(this.textBox_r);
             this.Controls.Add(this.textBox_Xmax);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_Rx);
             this.Controls.Add(this.textBox_Xmin);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -259,10 +259,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox_Xmin;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_Rx;
         private System.Windows.Forms.TextBox textBox_Xmax;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox_r;
+        private System.Windows.Forms.TextBox textBox_Hx;
+        private System.Windows.Forms.TextBox textBox_extend;
     }
 }
