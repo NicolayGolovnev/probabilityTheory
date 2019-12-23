@@ -1,0 +1,10 @@
+C:\Users\kolya\Desktop\Zaychik\obj\Debug\Zaychik.csprojAssemblyReference.cache
+C:\Users\kolya\Desktop\Zaychik\bin\Debug\Zaychik.exe.config
+C:\Users\kolya\Desktop\Zaychik\bin\Debug\Zaychik.exe
+C:\Users\kolya\Desktop\Zaychik\bin\Debug\Zaychik.pdb
+C:\Users\kolya\Desktop\Zaychik\obj\Debug\Zaychik.MainForm.resources
+C:\Users\kolya\Desktop\Zaychik\obj\Debug\Zaychik.Properties.Resources.resources
+C:\Users\kolya\Desktop\Zaychik\obj\Debug\Zaychik.csproj.GenerateResource.cache
+C:\Users\kolya\Desktop\Zaychik\obj\Debug\Zaychik.exe
+C:\Users\kolya\Desktop\Zaychik\obj\Debug\Zaychik.pdb
+C:\Users\kolya\Desktop\Zaychik\obj\Debug\Zaychik.groupedRowX.resources
