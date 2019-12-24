@@ -14,7 +14,7 @@ namespace Zaychik
 {
     public partial class MainForm : Form
     {
-        public static Calculation calc;
+        public static Calculation calc = new Calculation();
         public static double[] masX1 = new double[Program.N];
         public static double[] masY1 = new double[Program.N];
         public static double[] masX_temp = new double[Program.N];
@@ -27,6 +27,8 @@ namespace Zaychik
         public MainForm()
         {
             InitializeComponent();
+            //calc.setHiA(0.05);
+            //calc.Calculate();
         }
 
         private void открытьФайлToolStripMenuItem_Click(object sender, EventArgs e)

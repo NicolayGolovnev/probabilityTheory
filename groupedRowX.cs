@@ -23,7 +23,7 @@ namespace Zaychik
 
         public Graphics grph;
         public pointEstimates point;
-
+        public Hipotesy hip;
         public confidenceIntervals inter;
         public groupedRowX()
         {
