@@ -237,6 +237,7 @@
             this.button_pointEstimates.TabIndex = 15;
             this.button_pointEstimates.Text = "Точечные оценки";
             this.button_pointEstimates.UseVisualStyleBackColor = true;
+            this.button_pointEstimates.Click += new System.EventHandler(this.button_pointEstimates_Click);
             // 
             // button_hypothesis
             // 
@@ -246,6 +247,7 @@
             this.button_hypothesis.TabIndex = 16;
             this.button_hypothesis.Text = "Проверка гипотезы";
             this.button_hypothesis.UseVisualStyleBackColor = true;
+            this.button_hypothesis.Click += new System.EventHandler(this.button_hypothesis_Click);
             // 
             // button_confidenceIntervals
             // 
@@ -255,8 +257,9 @@
             this.button_confidenceIntervals.TabIndex = 17;
             this.button_confidenceIntervals.Text = "Доверительные интервалы";
             this.button_confidenceIntervals.UseVisualStyleBackColor = true;
+            this.button_confidenceIntervals.Click += new System.EventHandler(this.button_confidenceIntervals_Click);
             // 
-            // groupedRowX
+            // groupedRowY
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -278,8 +281,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.table);
-            this.Name = "groupedRowX";
-            this.Text = "groupedRowX";
+            this.Name = "groupedRowY";
+            this.Text = "Группированный ряд для Y";
             this.Load += new System.EventHandler(this.groupedRowX_Load);
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
             this.ResumeLayout(false);

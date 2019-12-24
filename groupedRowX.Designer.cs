@@ -281,7 +281,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.table);
             this.Name = "groupedRowX";
-            this.Text = "groupedRowX";
+            this.Text = "Группированный ряд для X";
             this.Load += new System.EventHandler(this.groupedRowX_Load);
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
             this.ResumeLayout(false);

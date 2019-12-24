@@ -53,7 +53,7 @@ namespace Zaychik
                     st = Data[i].Split(' ');
 
                     databaseX[i] = Convert.ToDouble(st[0]);
-                    databaseY[i] = Convert.ToInt32(st[1]);
+                    databaseY[i] = Convert.ToDouble(st[1]);
                 }
 
                 int k = 0;
@@ -89,7 +89,7 @@ namespace Zaychik
 
         private void корреляционнаяТаблицаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            correlationTable form3 = new correlationTable(databaseX, databaseY, form1, form2);
+            correlationTable form3 = new correlationTable(databaseX, databaseY);
             form3.ShowDialog();
         }
     }

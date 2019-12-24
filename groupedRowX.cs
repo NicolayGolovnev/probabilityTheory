@@ -28,8 +28,6 @@ namespace Zaychik
         public groupedRowX()
         {
             InitializeComponent();
-
-            
         }
 
         private void groupedRowX_Load(object sender, EventArgs e)
