@@ -237,6 +237,7 @@
             this.button_pointEstimates.TabIndex = 15;
             this.button_pointEstimates.Text = "Точечные оценки";
             this.button_pointEstimates.UseVisualStyleBackColor = true;
+            this.button_pointEstimates.Click += new System.EventHandler(this.button_pointEstimates_Click);
             // 
             // button_hypothesis
             // 

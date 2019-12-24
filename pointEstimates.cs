@@ -56,6 +56,16 @@ namespace Zaychik
             //заполнить их в табл
             // i - Ui - Ni - UiNi - UiNiTwice
 
+            for (int i = 0; i < Program.r; i++)
+            {
+                marks.Rows.Add();
+                marks.Rows[i].Cells[0].Value = i + 1;
+                marks.Rows[i].Cells[1].Value = Convert.ToString(Ui[i]);
+                marks.Rows[i].Cells[2].Value = Convert.ToString(dataFrequency[i]);
+                marks.Rows[i].Cells[3].Value = Convert.ToString(UiNi[i]);
+                marks.Rows[i].Cells[4].Value = Convert.ToString(UiNiTwice[i]);
+            }
+
             uAverage = 0;
             uAverageTwice = 0;
             for (int i = 0; i < Program.r; i++)
@@ -74,6 +84,31 @@ namespace Zaychik
             SxTwice = Hx * Hx * SuTwice;
             Sx = Math.Sqrt(SxTwice);
             //вывести эти 3 значения в лейблы
+
+            if (type == 1)//X
+            {
+                label1.Text = "U average = ";
+                label2.Text = "U2 average = ";
+                label3.Text = "S(u)^2 = ";
+                label4.Text = "X average = ";
+                label5.Text = "S(x)^2 = ";
+                label6.Text = "S(x) = ";
+            }
+            else
+            {
+                label1.Text = "V average = ";
+                label2.Text = "V^2 average = ";
+                label3.Text = "S(v)^2 = ";
+                label4.Text = "Y average = ";
+                label5.Text = "S(y)^2 = ";
+                label6.Text = "S(y) = ";
+            }
+            textBox_uAvg.Text = String.Format("{0:0.00}", Convert.ToString(uAverage));
+            textBox_uAvgTwice.Text = String.Format("{0:0.00}", Convert.ToString(uAverageTwice));
+            textBox_SuTwice.Text = String.Format("{0:0.00}", Convert.ToString(SuTwice));
+            textBox_xAvg.Text = String.Format("{0:0.00}", Convert.ToString(xAverage));
+            textBox_SxTwice.Text = String.Format("{0:0.00}", Convert.ToString(SxTwice));
+            textBox_Sx.Text = String.Format("{0:0.00}", Convert.ToString(Sx));
         }
     }
 }

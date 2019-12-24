@@ -22,6 +22,7 @@ namespace Zaychik
         public int Hx = new int();
 
         public Graphics grph;
+        public pointEstimates point;
         public groupedRowX()
         {
             InitializeComponent();
@@ -127,6 +128,10 @@ namespace Zaychik
             textBox_extend.Text = String.Format("{0:0.00}", Convert.ToString(extendX));
 
             grph = new Graphics(1, dataIntervals, dataPoligon, dataGist, dataAverage, dataEmpiric, Hx);
+            
+
+            int k = (int)dataAverage[3];
+            point = new pointEstimates(1, k, dataAverage, Hx, dataFrequency);
         }
 
         private void button_graphics_Click(object sender, EventArgs e)
@@ -135,8 +140,14 @@ namespace Zaychik
             //Для полигона - средние значения и dataPoligon
             //Для гистограммы - интервалы и dataGist
             //Для эмпирик функ - интервалы и dataEmpiric
-            Graphics grph = new Graphics(1, dataIntervals, dataPoligon, dataGist, dataAverage, dataEmpiric, Hx);
+            //grph = new Graphics(1, dataIntervals, dataPoligon, dataGist, dataAverage, dataEmpiric, Hx);
             grph.ShowDialog();
+        }
+
+        private void button_pointEstimates_Click(object sender, EventArgs e)
+        {
+            //point = new pointEstimates(1, k, dataAverage, Hx, dataFrequency);
+            point.ShowDialog();
         }
     }
 }
