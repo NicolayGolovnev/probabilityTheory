@@ -102,6 +102,9 @@
     <EmbeddedResource Include="confidenceIntervals.resx">
       <DependentUpon>confidenceIntervals.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="correlationTable.resx">
+      <DependentUpon>correlationTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Graphics.resx">
       <DependentUpon>Graphics.cs</DependentUpon>
     </EmbeddedResource>

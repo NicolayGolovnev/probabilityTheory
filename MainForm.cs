@@ -22,7 +22,9 @@ namespace Zaychik
 
         public double[] databaseX = new double [Program.N];
         public double[] databaseY = new double[Program.N];
-        
+
+        groupedRowX form1;
+        groupedRowY form2;
 
         public MainForm()
         {
@@ -67,25 +69,27 @@ namespace Zaychik
             }
             else
                 this.toolStripStatusLabel1.Text = "Файл не открылся, попробуйте еще раз!";
+
+            form1 = new groupedRowX();
+            form1.database = databaseX;
+
+            form2 = new groupedRowY();
+            form2.database = databaseY;
         }
 
         private void групированнаяРядToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            groupedRowX form1 = new groupedRowX();
-            form1.database = databaseX;
             form1.ShowDialog();
         }
 
         private void групированныйРядДляYToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            groupedRowY form2 = new groupedRowY();
-            form2.database = databaseY;
             form2.ShowDialog();
         }
 
         private void корреляционнаяТаблицаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            correlationTable form3 = new correlationTable(databaseX, databaseY);
+            correlationTable form3 = new correlationTable(databaseX, databaseY, form1, form2);
             form3.ShowDialog();
         }
     }

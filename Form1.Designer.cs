@@ -114,7 +114,7 @@
             this.Y4,
             this.X5,
             this.Y5});
-            this.mainTable.Location = new System.Drawing.Point(22, 46);
+            this.mainTable.Location = new System.Drawing.Point(12, 47);
             this.mainTable.Name = "mainTable";
             this.mainTable.RowHeadersVisible = false;
             this.mainTable.RowHeadersWidth = 62;
@@ -122,7 +122,7 @@
             this.mainTable.RowTemplate.ReadOnly = true;
             this.mainTable.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.mainTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.mainTable.Size = new System.Drawing.Size(778, 321);
+            this.mainTable.Size = new System.Drawing.Size(895, 414);
             this.mainTable.TabIndex = 2;
             // 
             // X1

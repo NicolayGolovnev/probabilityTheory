@@ -28,6 +28,8 @@ namespace Zaychik
         public groupedRowX()
         {
             InitializeComponent();
+
+            
         }
 
         private void groupedRowX_Load(object sender, EventArgs e)
@@ -87,15 +89,15 @@ namespace Zaychik
                 table.Rows.Add();
 
                 table.Rows[i].Cells[0].Value = i + 1;
-                
+
                 //интервал
                 int a1 = Convert.ToInt32(begin);
                 int a2 = Convert.ToInt32(begin + Hx);
                 dataIntervals[i + 1] = a2;
                 begin += Hx;
-                
+
                 if (i == Program.r - 1)
-                    table.Rows[i].Cells[1].Value = "[" + a1 +";" + a2 +"]";
+                    table.Rows[i].Cells[1].Value = "[" + a1 + ";" + a2 + "]";
                 else
                     table.Rows[i].Cells[1].Value = "[" + a1 + ";" + a2 + ")";
 
@@ -111,11 +113,11 @@ namespace Zaychik
                 table.Rows[i].Cells[5].Value = dataGist[i];
 
                 //подсчитываем функцию распределения через сумму пред. Ni/N
-                if (i == 0) 
+                if (i == 0)
                     table.Rows[i].Cells[6].Value = table.Rows[i].Cells[4].Value;
                 else
-                    table.Rows[i].Cells[6].Value = 
-                        Convert.ToDouble(table.Rows[i - 1].Cells[6].Value) 
+                    table.Rows[i].Cells[6].Value =
+                        Convert.ToDouble(table.Rows[i - 1].Cells[6].Value)
                         + Convert.ToDouble(table.Rows[i].Cells[4].Value);
                 dataEmpiric[i] = Convert.ToDouble(table.Rows[i].Cells[6].Value);
 
@@ -130,7 +132,7 @@ namespace Zaychik
             textBox_extend.Text = String.Format("{0:0.00}", Convert.ToString(extendX));
 
             grph = new Graphics(1, dataIntervals, dataPoligon, dataGist, dataAverage, dataEmpiric, Hx);
-            
+
 
             int k = (int)dataAverage[3];
             point = new pointEstimates(1, k, dataAverage, Hx, dataFrequency);
