@@ -57,42 +57,30 @@ namespace Zaychik
             interval[6, 1] = intervals[7];
 
             //генерация данных для эмпирической функции
-            for (int j = 0; j < Program.r + 2; j++)
+            func_X[0] = 0;
+            func_int_X[0] = interval[0, 0] - Hx;
+            for (int j = 0; j < Program.r; j++)
             {
-                if (j == 0)
-                {
-                    func_X[j] = 0;
-                    func_int_X[j] = interval[j, 0] - Hx;
-                }
-                else if (j == 8)
-                {
-                    func_X[j] = dataEmpiric[j - 2];
-                    func_int_X[j] = dataGist[j - 2];
-                } 
-                else{
-                    func_X[j] = dataEmpiric[j - 1];
-                    func_int_X[j] = dataGist[j - 1];
-                }
-                
-
+                func_X[j + 1] = dataEmpiric[j];
+                func_int_X[j + 1] = interval[j, 0];
             }
+            func_X[8] = dataEmpiric[6];
+            func_int_X[8] = interval[6, 1];
 
             if (value == 1)
                 this.Text = "Графики для группированного ряда X";
             else
                 this.Text = "Графики для группированного ряда Y";
 
-            //chart_Poligon.Series["nᵢ / n"].Points.DataBindXY(dataAverage, dataPoligon);
-            for (int i = 0; i < Program.r; i++)
-                chart_Poligon.Series["nᵢ / n"].Points.AddXY(dataAverage[i], dataPoligon[i]);
+            chart_Poligon.Series["nᵢ / n"].Points.DataBindXY(dataAverage, dataPoligon);
             chart_Poligon.ChartAreas["ChartArea1"].AxisX.Interval = Hx;
 
             chart_Gist.Series["nᵢ / (n ∙ h)"].Points.DataBindXY(dataAverage, dataGist);
-            //chart_Gist.ChartAreas["ChartArea1"].AxisX.Interval = Hx;
+            chart_Gist.ChartAreas["ChartArea1"].AxisX.Interval = Hx;
             chart_Gist.ChartAreas["ChartArea1"].AxisX.IntervalOffset = Hx / 2;
 
             chart_Empiric.Series["∑(nᵢ / n)"].Points.DataBindXY(func_int_X, func_X);
-            //chart_Empiric.ChartAreas["ChartArea1"].AxisX.Interval = Hx;
+            chart_Empiric.ChartAreas["ChartArea1"].AxisX.Interval = Hx;
         }
     }
 }
