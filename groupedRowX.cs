@@ -20,6 +20,8 @@ namespace Zaychik
         public int[] dataIntervals = new int[8];
         public double[] dataEmpiric = new double[Program.r];
         public int Hx = new int();
+
+        public Graphics grph;
         public groupedRowX()
         {
             InitializeComponent();
@@ -124,6 +126,7 @@ namespace Zaychik
             textBox_Hx.Text = String.Format("{0:0.00}", Convert.ToString(Hx));
             textBox_extend.Text = String.Format("{0:0.00}", Convert.ToString(extendX));
 
+            grph = new Graphics(1, dataIntervals, dataPoligon, dataGist, dataAverage, dataEmpiric, Hx);
         }
 
         private void button_graphics_Click(object sender, EventArgs e)

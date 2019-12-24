@@ -22,6 +22,11 @@ namespace Zaychik
         public double[] func_int_X = new double[Program.r + 2];
         public int[,] interval = new int[Program.r, 2];
 
+        public Graphics()
+        {
+
+        }
+
         public Graphics(int value,int[] intervals, double[] poligon, double[] gist, double[] average, 
                             double[] empiric, int hx)
         {

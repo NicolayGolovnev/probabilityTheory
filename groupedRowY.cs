@@ -125,6 +125,8 @@ namespace Zaychik
             textBox_Hx.Text = String.Format("{0:0.00}", Convert.ToString(Hx));
             textBox_extend.Text = String.Format("{0:0.00}", Convert.ToString(extendX));
 
+            //создаем форму графика
+            Graphics grph = new Graphics(2, dataIntervals, dataPoligon, dataGist, dataAverage, dataEmpiric, Hx);
         }
 
         private void button_graphics_Click(object sender, EventArgs e)
@@ -133,7 +135,7 @@ namespace Zaychik
             //Для полигона - средние значения и dataPoligon
             //Для гистограммы - интервалы и dataGist
             //Для эмпирик функ - интервалы и dataEmpiric
-            Graphics grph = new Graphics(2, dataIntervals, dataPoligon, dataGist, dataAverage, dataEmpiric, Hx);
+            
             grph.ShowDialog();
         }
     }
