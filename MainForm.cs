@@ -75,5 +75,18 @@ namespace Zaychik
             form1.database = databaseX;
             form1.ShowDialog();
         }
+
+        private void групированныйРядДляYToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            groupedRowY form2 = new groupedRowY();
+            form2.database = databaseY;
+            form2.ShowDialog();
+        }
+
+        private void корреляционнаяТаблицаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            correlationTable form3 = new correlationTable(databaseX, databaseY);
+            form3.ShowDialog();
+        }
     }
 }

@@ -78,12 +78,14 @@
             this.групированныйРядДляYToolStripMenuItem.Name = "групированныйРядДляYToolStripMenuItem";
             this.групированныйРядДляYToolStripMenuItem.Size = new System.Drawing.Size(243, 29);
             this.групированныйРядДляYToolStripMenuItem.Text = "Групированный ряд для Y";
+            this.групированныйРядДляYToolStripMenuItem.Click += new System.EventHandler(this.групированныйРядДляYToolStripMenuItem_Click);
             // 
             // корреляционнаяТаблицаToolStripMenuItem
             // 
             this.корреляционнаяТаблицаToolStripMenuItem.Name = "корреляционнаяТаблицаToolStripMenuItem";
             this.корреляционнаяТаблицаToolStripMenuItem.Size = new System.Drawing.Size(238, 29);
             this.корреляционнаяТаблицаToolStripMenuItem.Text = "Корреляционная таблица";
+            this.корреляционнаяТаблицаToolStripMenuItem.Click += new System.EventHandler(this.корреляционнаяТаблицаToolStripMenuItem_Click);
             // 
             // открытьФайлToolStripMenuItem
             // 
@@ -198,7 +200,7 @@
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 21);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 15);
             // 
             // MainForm
             // 

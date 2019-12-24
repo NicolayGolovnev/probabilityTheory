@@ -54,6 +54,12 @@
     <Compile Include="confidenceIntervals.Designer.cs">
       <DependentUpon>confidenceIntervals.cs</DependentUpon>
     </Compile>
+    <Compile Include="correlationTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="correlationTable.Designer.cs">
+      <DependentUpon>correlationTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Graphics.cs">
       <SubType>Form</SubType>
     </Compile>
