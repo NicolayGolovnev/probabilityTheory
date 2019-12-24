@@ -19,6 +19,7 @@ namespace Zaychik
         public double[] dataFrequency = new double[Program.r];
         public int[] dataIntervals = new int[8];
         public double[] dataEmpiric = new double[Program.r];
+        public int Hx = new int();
         public groupedRowX()
         {
             InitializeComponent();
@@ -43,6 +44,7 @@ namespace Zaychik
             //вывод Rx
 
             int Hx = (int)Math.Ceiling(Rx / Program.r);
+            this.Hx = Hx;
             //вывод Hx
 
             //Расширение промежутка
@@ -94,7 +96,7 @@ namespace Zaychik
 
                 table.Rows[i].Cells[2].Value = dataFrequency[i];
 
-                dataAverage[i] = Convert.ToDouble((a2 - a1) / 2);
+                dataAverage[i] = Convert.ToDouble((a2 + a1) / 2);
                 table.Rows[i].Cells[3].Value = dataAverage[i];
 
                 dataPoligon[i] = dataFrequency[i] / Program.N;
@@ -130,7 +132,7 @@ namespace Zaychik
             //Для полигона - средние значения и dataPoligon
             //Для гистограммы - интервалы и dataGist
             //Для эмпирик функ - интервалы и dataEmpiric
-            Graphics grph = new Graphics(1, dataIntervals, dataPoligon, dataGist, dataAverage, dataEmpiric);
+            Graphics grph = new Graphics(1, dataIntervals, dataPoligon, dataGist, dataAverage, dataEmpiric, Hx);
             grph.ShowDialog();
         }
     }
