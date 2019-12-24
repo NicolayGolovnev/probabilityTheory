@@ -23,6 +23,8 @@ namespace Zaychik
 
         public Graphics grph;
         public pointEstimates point;
+
+        public confidenceIntervals inter;
         public groupedRowX()
         {
             InitializeComponent();
@@ -132,6 +134,8 @@ namespace Zaychik
 
             int k = (int)dataAverage[3];
             point = new pointEstimates(1, k, dataAverage, Hx, dataFrequency);
+
+            inter = new confidenceIntervals(1, point);
         }
 
         private void button_graphics_Click(object sender, EventArgs e)
@@ -148,6 +152,11 @@ namespace Zaychik
         {
             //point = new pointEstimates(1, k, dataAverage, Hx, dataFrequency);
             point.ShowDialog();
+        }
+
+        private void button_confidenceIntervals_Click(object sender, EventArgs e)
+        {
+            inter.ShowDialog();
         }
     }
 }

@@ -14,9 +14,15 @@ namespace Zaychik
 {
     public partial class MainForm : Form
     {
-        
+        public static Calculation calc;
+        public static double[] masX1 = new double[Program.N];
+        public static double[] masY1 = new double[Program.N];
+        public static double[] masX_temp = new double[Program.N];
+        public static double[] masY_temp = new double[Program.N];
+
         public double[] databaseX = new double [Program.N];
         public double[] databaseY = new double[Program.N];
+        
 
         public MainForm()
         {

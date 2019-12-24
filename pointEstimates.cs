@@ -80,7 +80,7 @@ namespace Zaychik
             //Вывести через лейблы
             //uAverage - uAverageTwice - SuTwice
 
-            xAverage = Hx * uAverage;
+            xAverage = Hx * uAverage + koef;
             SxTwice = Hx * Hx * SuTwice;
             Sx = Math.Sqrt(SxTwice);
             //вывести эти 3 значения в лейблы
@@ -88,7 +88,7 @@ namespace Zaychik
             if (type == 1)//X
             {
                 label1.Text = "U average = ";
-                label2.Text = "U2 average = ";
+                label2.Text = "U^2 average = ";
                 label3.Text = "S(u)^2 = ";
                 label4.Text = "X average = ";
                 label5.Text = "S(x)^2 = ";

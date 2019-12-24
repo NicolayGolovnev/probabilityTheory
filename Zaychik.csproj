@@ -47,6 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calculation.cs" />
+    <Compile Include="confidenceIntervals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="confidenceIntervals.Designer.cs">
+      <DependentUpon>confidenceIntervals.cs</DependentUpon>
+    </Compile>
     <Compile Include="Graphics.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +72,13 @@
     <Compile Include="groupedRowX.Designer.cs">
       <DependentUpon>groupedRowX.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hipotesy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hipotesy.Designer.cs">
+      <DependentUpon>Hipotesy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Intervals.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +93,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="confidenceIntervals.resx">
+      <DependentUpon>confidenceIntervals.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Graphics.resx">
       <DependentUpon>Graphics.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="groupedRowX.resx">
       <DependentUpon>groupedRowX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hipotesy.resx">
+      <DependentUpon>Hipotesy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

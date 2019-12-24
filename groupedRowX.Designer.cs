@@ -256,6 +256,7 @@
             this.button_confidenceIntervals.TabIndex = 17;
             this.button_confidenceIntervals.Text = "Доверительные интервалы";
             this.button_confidenceIntervals.UseVisualStyleBackColor = true;
+            this.button_confidenceIntervals.Click += new System.EventHandler(this.button_confidenceIntervals_Click);
             // 
             // groupedRowX
             // 
