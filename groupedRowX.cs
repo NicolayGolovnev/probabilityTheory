@@ -26,7 +26,7 @@ namespace Zaychik
 
         public Graphics grph;
         public pointEstimates point;
-        public Hipotesy hip;
+        public HipotesyX hip;
         public confidenceIntervals inter;
         public groupedRowX()
         {
@@ -150,7 +150,7 @@ namespace Zaychik
             grph = new Graphics(1, dataIntervals, dataPoligon, dataGist, dataAverage, dataEmpiric, Hx);
             int k = (int)dataAverage[3];
             point = new pointEstimates(1, k, dataAverage, Hx, dataFrequency);
-
+            hip = new HipotesyX();
             inter = new confidenceIntervals(1, point);
         }
 
@@ -177,7 +177,7 @@ namespace Zaychik
 
         private void button_hypothesis_Click(object sender, EventArgs e)
         {
-
+            hip.ShowDialog();
         }
     }
 }

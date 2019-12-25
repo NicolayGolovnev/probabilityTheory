@@ -155,7 +155,7 @@ namespace Zaychik
             int k1 = (int)X.dataAverage[3];
             pointEstimates pointX = new pointEstimates(1, k1, X.dataAverage, X.Hx, X.dataFrequency);
 
-            int k2 = (int)X.dataAverage[3];
+            int k2 = (int)Y.dataAverage[3];
             pointEstimates pointY = new pointEstimates(2, k2, Y.dataAverage, Y.Hy, Y.dataFrequency);
 
             double uvAvg = 0;
@@ -170,6 +170,12 @@ namespace Zaychik
             double _out3 = (xyAvg - pointX.xAverage * pointY.xAverage);
             double _out4 = pointX.Sx * pointY.Sx;*/
             textBox_correlCoef.Text = String.Format("{0:0,00}", Convert.ToString(correlCoef));
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            regressionChart grph = new regressionChart(dataX, dataY, correlCoef);
+            grph.Show();
         }
     }
 }

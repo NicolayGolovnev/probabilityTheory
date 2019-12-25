@@ -69,7 +69,7 @@
             this.table.RowHeadersVisible = false;
             this.table.RowHeadersWidth = 62;
             this.table.RowTemplate.Height = 28;
-            this.table.Size = new System.Drawing.Size(1109, 387);
+            this.table.Size = new System.Drawing.Size(1109, 381);
             this.table.TabIndex = 0;
             // 
             // interX
@@ -150,6 +150,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Выборочные уравнения";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // correlationTable
             // 
