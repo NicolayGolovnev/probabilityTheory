@@ -62,28 +62,28 @@
             this.открытьФайлToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(919, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(919, 36);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // групированнаяРядToolStripMenuItem
             // 
             this.групированнаяРядToolStripMenuItem.Name = "групированнаяРядToolStripMenuItem";
-            this.групированнаяРядToolStripMenuItem.Size = new System.Drawing.Size(244, 29);
+            this.групированнаяРядToolStripMenuItem.Size = new System.Drawing.Size(244, 32);
             this.групированнаяРядToolStripMenuItem.Text = "Групированный ряд для X";
             this.групированнаяРядToolStripMenuItem.Click += new System.EventHandler(this.групированнаяРядToolStripMenuItem_Click);
             // 
             // групированныйРядДляYToolStripMenuItem
             // 
             this.групированныйРядДляYToolStripMenuItem.Name = "групированныйРядДляYToolStripMenuItem";
-            this.групированныйРядДляYToolStripMenuItem.Size = new System.Drawing.Size(243, 29);
+            this.групированныйРядДляYToolStripMenuItem.Size = new System.Drawing.Size(243, 32);
             this.групированныйРядДляYToolStripMenuItem.Text = "Групированный ряд для Y";
             this.групированныйРядДляYToolStripMenuItem.Click += new System.EventHandler(this.групированныйРядДляYToolStripMenuItem_Click);
             // 
             // корреляционнаяТаблицаToolStripMenuItem
             // 
             this.корреляционнаяТаблицаToolStripMenuItem.Name = "корреляционнаяТаблицаToolStripMenuItem";
-            this.корреляционнаяТаблицаToolStripMenuItem.Size = new System.Drawing.Size(238, 29);
+            this.корреляционнаяТаблицаToolStripMenuItem.Size = new System.Drawing.Size(238, 32);
             this.корреляционнаяТаблицаToolStripMenuItem.Text = "Корреляционная таблица";
             this.корреляционнаяТаблицаToolStripMenuItem.Click += new System.EventHandler(this.корреляционнаяТаблицаToolStripMenuItem_Click);
             // 
@@ -91,7 +91,7 @@
             // 
             this.открытьФайлToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.открытьФайлToolStripMenuItem.Name = "открытьФайлToolStripMenuItem";
-            this.открытьФайлToolStripMenuItem.Size = new System.Drawing.Size(143, 29);
+            this.открытьФайлToolStripMenuItem.Size = new System.Drawing.Size(143, 32);
             this.открытьФайлToolStripMenuItem.Text = "Открыть файл";
             this.открытьФайлToolStripMenuItem.Click += new System.EventHandler(this.открытьФайлToolStripMenuItem_Click);
             // 
@@ -114,7 +114,8 @@
             this.Y4,
             this.X5,
             this.Y5});
-            this.mainTable.Location = new System.Drawing.Point(12, 47);
+            this.mainTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainTable.Location = new System.Drawing.Point(0, 36);
             this.mainTable.Name = "mainTable";
             this.mainTable.RowHeadersVisible = false;
             this.mainTable.RowHeadersWidth = 62;
@@ -122,7 +123,7 @@
             this.mainTable.RowTemplate.ReadOnly = true;
             this.mainTable.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.mainTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.mainTable.Size = new System.Drawing.Size(895, 414);
+            this.mainTable.Size = new System.Drawing.Size(919, 492);
             this.mainTable.TabIndex = 2;
             // 
             // X1
@@ -190,7 +191,7 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 470);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 506);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(919, 22);
             this.statusStrip1.TabIndex = 2;
@@ -206,7 +207,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 492);
+            this.ClientSize = new System.Drawing.Size(919, 528);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.mainTable);
             this.Controls.Add(this.menuStrip1);

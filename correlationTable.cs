@@ -18,6 +18,8 @@ namespace Zaychik
         public int[,] intervalY = new int[Program.r, 2];
         public int[,] intervalX = new int[Program.r, 2];
 
+        public double correlCoef = new double();
+
         public int getInterX(double x)
         {
             for (int i = 0; i < Program.r; i++)
@@ -51,104 +53,54 @@ namespace Zaychik
             InitializeComponent();
         }
 
-        public correlationTable(double[] X, double[] Y)
+        public correlationTable(groupedRowX X, groupedRowY Y)
         {
             InitializeComponent();
-            dataX = X;
-            dataY = Y;
+            dataX = X.database;
+            dataY = Y.database;
 
-            double xMin = 1000, xMax = 0;
-            double yMin = 1000, yMax = 0;
-            for (int i = 0; i < Program.N; i++)
-            {
-                if (xMin > X[i])
-                    xMin = X[i];
-                if (xMax < X[i])
-                    xMax = X[i];
+            intervalY[0, 0] = Y.dataIntervals[0];
+            intervalY[0, 1] = Y.dataIntervals[1];
 
-                if (yMin > Y[i])
-                    yMin = Y[i];
-                if (yMax < Y[i])
-                    yMax = Y[i];
-            }
+            intervalY[1, 0] = Y.dataIntervals[1];
+            intervalY[1, 1] = Y.dataIntervals[2];
 
-            //разрыв
-            double Rx = Convert.ToDouble(xMax - xMin);
-            double Ry = Convert.ToDouble(yMax - yMin);
+            intervalY[2, 0] = Y.dataIntervals[2];
+            intervalY[2, 1] = Y.dataIntervals[3];
 
-            int Hx = (int)Math.Ceiling(Rx / Program.r);
-            int Hy = (int)Math.Ceiling(Ry / Program.r);
+            intervalY[3, 0] = Y.dataIntervals[3];
+            intervalY[3, 1] = Y.dataIntervals[4];
 
-            //Расширение промежутка
-            double extendX = (Hx - (Rx / Program.r)) * Program.r;
-            double extendY = (Hy - (Ry / Program.r)) * Program.r;
+            intervalY[4, 0] = Y.dataIntervals[4];
+            intervalY[4, 1] = Y.dataIntervals[5];
 
-            //начало интервала(тк дробные, округляем в меньшую сторону)
-            double beginX = Math.Floor(xMin) - Math.Floor(extendX / 2);
-            double beginY = yMin - Math.Floor(extendY / 2);
+            intervalY[5, 0] = Y.dataIntervals[5];
+            intervalY[5, 1] = Y.dataIntervals[6];
 
-            int[] dataIntervalsX = new int[8];
-            int[] dataIntervalsY = new int[8];
-            dataIntervalsX[0] = Convert.ToInt32(beginX);
-            dataIntervalsY[0] = Convert.ToInt32(beginY);
-            //заполнение таблицы
-            for (int i = 0; i < Program.r; i++)
-            {
-                //интервал для X
-                int a1X = Convert.ToInt32(beginX);
-                int a2X = Convert.ToInt32(beginX + Hx);
-                dataIntervalsX[i + 1] = a2X;
-                beginX += Hx;
-
-                //интервал для Y
-                int a1Y = Convert.ToInt32(beginY);
-                int a2Y = Convert.ToInt32(beginY + Hy);
-                dataIntervalsY[i + 1] = a2Y;
-                beginY += Hy;
-            }
-
-            intervalY[0, 0] = dataIntervalsY[0];
-            intervalY[0, 1] = dataIntervalsY[1];
-
-            intervalY[1, 0] = dataIntervalsY[1];
-            intervalY[1, 1] = dataIntervalsY[2];
-
-            intervalY[2, 0] = dataIntervalsY[2];
-            intervalY[2, 1] = dataIntervalsY[3];
-
-            intervalY[3, 0] = dataIntervalsY[3];
-            intervalY[3, 1] = dataIntervalsY[4];
-
-            intervalY[4, 0] = dataIntervalsY[4];
-            intervalY[4, 1] = dataIntervalsY[5];
-
-            intervalY[5, 0] = dataIntervalsY[5];
-            intervalY[5, 1] = dataIntervalsY[6];
-
-            intervalY[6, 0] = dataIntervalsY[6];
-            intervalY[6, 1] = dataIntervalsY[7];
+            intervalY[6, 0] = Y.dataIntervals[6];
+            intervalY[6, 1] = Y.dataIntervals[7];
 
 
-            intervalX[0, 0] = dataIntervalsX[0];
-            intervalX[0, 1] = dataIntervalsX[1];
+            intervalX[0, 0] = X.dataIntervals[0];
+            intervalX[0, 1] = X.dataIntervals[1];
 
-            intervalX[1, 0] = dataIntervalsX[1];
-            intervalX[1, 1] = dataIntervalsX[2];
+            intervalX[1, 0] = X.dataIntervals[1];
+            intervalX[1, 1] = X.dataIntervals[2];
 
-            intervalX[2, 0] = dataIntervalsX[2];
-            intervalX[2, 1] = dataIntervalsX[3];
+            intervalX[2, 0] = X.dataIntervals[2];
+            intervalX[2, 1] = X.dataIntervals[3];
 
-            intervalX[3, 0] = dataIntervalsX[3];
-            intervalX[3, 1] = dataIntervalsX[4];
+            intervalX[3, 0] = X.dataIntervals[3];
+            intervalX[3, 1] = X.dataIntervals[4];
 
-            intervalX[4, 0] = dataIntervalsX[4];
-            intervalX[4, 1] = dataIntervalsX[5];
+            intervalX[4, 0] = X.dataIntervals[4];
+            intervalX[4, 1] = X.dataIntervals[5];
 
-            intervalX[5, 0] = dataIntervalsX[5];
-            intervalX[5, 1] = dataIntervalsX[6];
+            intervalX[5, 0] = X.dataIntervals[5];
+            intervalX[5, 1] = X.dataIntervals[6];
 
-            intervalX[6, 0] = dataIntervalsX[6];
-            intervalX[6, 1] = dataIntervalsX[7];
+            intervalX[6, 0] = X.dataIntervals[6];
+            intervalX[6, 1] = X.dataIntervals[7];
 
 
             table.Columns[1].HeaderText = "[" + Convert.ToString(intervalY[0, 0]) + ";" + Convert.ToString(intervalY[0, 1]) + ")";
@@ -179,8 +131,45 @@ namespace Zaychik
 
             for (int i = 0; i < Program.N; i++)
                 table.Rows[getInterX(dataX[i])].Cells[getInterY(dataY[i]) + 1].Value = Convert.ToString(Convert.ToInt32(table.Rows[getInterX(dataX[i])].Cells[getInterY(dataY[i]) + 1].Value) + 1);
-            
+
+            for (int i = 1; i <= Program.r; i++)
+            {
+                int a = 0;
+                for (int j = 0; j < Program.r; j++)
+                    a += Convert.ToInt32(table.Rows[j].Cells[i].Value);
+                table.Rows[7].Cells[i].Value = Convert.ToString(a);
+            }
+
+            for (int i = 0; i < Program.r; i++)
+            {
+                int a = 0;
+                for (int j = 1; j <= Program.r; j++)
+                    a += Convert.ToInt32(table.Rows[i].Cells[j].Value);
+                table.Rows[i].Cells[8].Value = Convert.ToString(a);
+            }
+            table.Rows[7].Cells[8].Value = "∑=50";
+
+
             //подсчитать коэф корреляции
+
+            int k1 = (int)X.dataAverage[3];
+            pointEstimates pointX = new pointEstimates(1, k1, X.dataAverage, X.Hx, X.dataFrequency);
+
+            int k2 = (int)X.dataAverage[3];
+            pointEstimates pointY = new pointEstimates(2, k2, Y.dataAverage, Y.Hy, Y.dataFrequency);
+
+            double uvAvg = 0;
+            for (int i = 0; i < Program.r; i++)
+                for (int j = 0; j < Program.r; j++)
+                    uvAvg += pointX.U[i] * pointY.U[j] * Convert.ToDouble(table.Rows[i].Cells[j + 1].Value);
+            uvAvg /= (double)Program.N;
+
+            correlCoef = (double)Program.N / (double)(Program.N - 1) * (uvAvg - pointX.uAverage * pointY.uAverage) / Math.Sqrt(pointX.SuTwice) / Math.Sqrt(pointY.SuTwice);
+            /*double _out1 = (double)Program.N / (double)(Program.N - 1);
+            double _out2 = xyAvg;
+            double _out3 = (xyAvg - pointX.xAverage * pointY.xAverage);
+            double _out4 = pointX.Sx * pointY.Sx;*/
+            textBox_correlCoef.Text = String.Format("{0:0,00}", Convert.ToString(correlCoef));
         }
     }
 }

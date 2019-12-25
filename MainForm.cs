@@ -70,11 +70,8 @@ namespace Zaychik
             else
                 this.toolStripStatusLabel1.Text = "Файл не открылся, попробуйте еще раз!";
 
-            form1 = new groupedRowX();
-            form1.database = databaseX;
-
-            form2 = new groupedRowY();
-            form2.database = databaseY;
+            form1 = new groupedRowX(databaseX);
+            form2 = new groupedRowY(databaseY);
         }
 
         private void групированнаяРядToolStripMenuItem_Click(object sender, EventArgs e)
@@ -89,7 +86,7 @@ namespace Zaychik
 
         private void корреляционнаяТаблицаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            correlationTable form3 = new correlationTable(databaseX, databaseY);
+            correlationTable form3 = new correlationTable(form1, form2);
             form3.ShowDialog();
         }
     }

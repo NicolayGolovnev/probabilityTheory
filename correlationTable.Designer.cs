@@ -38,6 +38,8 @@
             this.interY6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.interY7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox_correlCoef = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +68,7 @@
             this.table.RowHeadersVisible = false;
             this.table.RowHeadersWidth = 62;
             this.table.RowTemplate.Height = 28;
-            this.table.Size = new System.Drawing.Size(922, 203);
+            this.table.Size = new System.Drawing.Size(1109, 387);
             this.table.TabIndex = 0;
             // 
             // interX
@@ -123,16 +125,35 @@
             this.countX.MinimumWidth = 8;
             this.countX.Name = "countX";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 438);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(232, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Коэффициент корреляции = ";
+            // 
+            // textBox_correlCoef
+            // 
+            this.textBox_correlCoef.Location = new System.Drawing.Point(250, 435);
+            this.textBox_correlCoef.Name = "textBox_correlCoef";
+            this.textBox_correlCoef.Size = new System.Drawing.Size(100, 26);
+            this.textBox_correlCoef.TabIndex = 2;
+            // 
             // correlationTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(922, 367);
+            this.ClientSize = new System.Drawing.Size(1109, 502);
+            this.Controls.Add(this.textBox_correlCoef);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.table);
             this.Name = "correlationTable";
             this.Text = "correlationTable";
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -148,5 +169,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn interY6;
         private System.Windows.Forms.DataGridViewTextBoxColumn interY7;
         private System.Windows.Forms.DataGridViewTextBoxColumn countX;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox_correlCoef;
     }
 }

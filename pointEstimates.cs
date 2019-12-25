@@ -17,6 +17,8 @@ namespace Zaychik
         public double[] dataAverage = new double[Program.r];
         public double[] dataFrequency = new double[Program.r];//ni
         public int Hx = new int();
+
+        public double[] U = new double[Program.r];
         public double uAverage = new double();
         public double uAverageTwice = new double();
         public double SuTwice = new double();
@@ -44,6 +46,7 @@ namespace Zaychik
             double[] Ui = new double[Program.r];
             for (int i = 0; i < Program.r; i++)
                 Ui[i] = (dataAverage[i] - koef) / (double)Hx;
+            U = Ui;
 
             double[] UiNi = new double[Program.N];
             for (int i = 0; i < Program.r; i++)

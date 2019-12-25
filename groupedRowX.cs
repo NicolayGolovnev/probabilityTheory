@@ -20,6 +20,9 @@ namespace Zaychik
         public int[] dataIntervals = new int[8];
         public double[] dataEmpiric = new double[Program.r];
         public int Hx = new int();
+        public double xMin = new double();
+        public double xMax = new double();
+        public double Rx = new double();
 
         public Graphics grph;
         public pointEstimates point;
@@ -30,8 +33,11 @@ namespace Zaychik
             InitializeComponent();
         }
 
-        private void groupedRowX_Load(object sender, EventArgs e)
+        public groupedRowX(double[] data)
         {
+            InitializeComponent();
+            database = data;
+
             //заполняем таблицу
             double xMin = 1000, xMax = 0;
 
@@ -43,9 +49,12 @@ namespace Zaychik
                 if (xMax < database[i])
                     xMax = database[i];
             }
+            this.xMin = xMin;
+            this.xMax = xMax;
 
             //разрыв
             double Rx = Convert.ToDouble(xMax - xMin);
+            this.Rx = Rx;
             //вывод Rx
 
             int Hx = (int)Math.Ceiling(Rx / Program.r);
@@ -81,17 +90,42 @@ namespace Zaychik
             }
 
             dataIntervals[0] = Convert.ToInt32(begin);
-            //заполнение таблицы
+            
+            double buf = 0;
+            for (int i = 0; i < Program.r; i++)
+            {
+                //интервал
+                int a1 = Convert.ToInt32(begin);
+                int a2 = Convert.ToInt32(begin + Hx);
+                dataIntervals[i + 1] = a2;
+                begin += Hx;
+
+                dataAverage[i] = Convert.ToDouble((a2 + a1) / 2);
+                dataPoligon[i] = dataFrequency[i] / Program.N;
+                dataGist[i] = dataPoligon[i] / Hx;
+
+                //подсчитываем функцию распределения через сумму пред. Ni/N
+                if (i == 0)
+                    buf = dataPoligon[i];
+                else
+                    buf += dataPoligon[i];
+                dataEmpiric[i] = buf;
+            }
+        }
+
+        private void groupedRowX_Load(object sender, EventArgs e)
+        {
+            int begin = dataIntervals[0];
+
+            table.Rows.Clear();
             for (int i = 0; i < Program.r; i++)
             {
                 table.Rows.Add();
-
                 table.Rows[i].Cells[0].Value = i + 1;
 
                 //интервал
                 int a1 = Convert.ToInt32(begin);
                 int a2 = Convert.ToInt32(begin + Hx);
-                dataIntervals[i + 1] = a2;
                 begin += Hx;
 
                 if (i == Program.r - 1)
@@ -100,25 +134,10 @@ namespace Zaychik
                     table.Rows[i].Cells[1].Value = "[" + a1 + ";" + a2 + ")";
 
                 table.Rows[i].Cells[2].Value = dataFrequency[i];
-
-                dataAverage[i] = Convert.ToDouble((a2 + a1) / 2);
                 table.Rows[i].Cells[3].Value = dataAverage[i];
-
-                dataPoligon[i] = dataFrequency[i] / Program.N;
                 table.Rows[i].Cells[4].Value = dataPoligon[i];
-
-                dataGist[i] = dataPoligon[i] / Hx;
                 table.Rows[i].Cells[5].Value = dataGist[i];
-
-                //подсчитываем функцию распределения через сумму пред. Ni/N
-                if (i == 0)
-                    table.Rows[i].Cells[6].Value = table.Rows[i].Cells[4].Value;
-                else
-                    table.Rows[i].Cells[6].Value =
-                        Convert.ToDouble(table.Rows[i - 1].Cells[6].Value)
-                        + Convert.ToDouble(table.Rows[i].Cells[4].Value);
-                dataEmpiric[i] = Convert.ToDouble(table.Rows[i].Cells[6].Value);
-
+                table.Rows[i].Cells[6].Value = dataEmpiric[i];
             }
 
             //заполняем текст боксы
@@ -127,10 +146,8 @@ namespace Zaychik
             textBox_Rx.Text = String.Format("{0:0.00}", Convert.ToString(Rx));
             textBox_r.Text = String.Format("{0:0.00}", Convert.ToString(Program.r));
             textBox_Hx.Text = String.Format("{0:0.00}", Convert.ToString(Hx));
-            textBox_extend.Text = String.Format("{0:0.00}", Convert.ToString(extendX));
 
             grph = new Graphics(1, dataIntervals, dataPoligon, dataGist, dataAverage, dataEmpiric, Hx);
-
 
             int k = (int)dataAverage[3];
             point = new pointEstimates(1, k, dataAverage, Hx, dataFrequency);
@@ -158,5 +175,7 @@ namespace Zaychik
         {
             inter.ShowDialog();
         }
+
+        
     }
 }
