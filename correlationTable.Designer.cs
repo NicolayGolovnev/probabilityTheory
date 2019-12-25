@@ -40,6 +40,7 @@
             this.countX = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_correlCoef = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,11 +142,21 @@
             this.textBox_correlCoef.Size = new System.Drawing.Size(100, 26);
             this.textBox_correlCoef.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(834, 412);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(240, 73);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Выборочные уравнения";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // correlationTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 502);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox_correlCoef);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.table);
@@ -171,5 +182,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn countX;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_correlCoef;
+        private System.Windows.Forms.Button button1;
     }
 }

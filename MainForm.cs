@@ -54,6 +54,8 @@ namespace Zaychik
 
                     databaseX[i] = Convert.ToDouble(st[0]);
                     databaseY[i] = Convert.ToDouble(st[1]);
+                    masX_temp[i] = databaseX[i];
+                    masY_temp[i] = databaseY[i];
                 }
 
                 int k = 0;
@@ -69,6 +71,9 @@ namespace Zaychik
             }
             else
                 this.toolStripStatusLabel1.Text = "Файл не открылся, попробуйте еще раз!";
+
+            calc.setHiA(0.05);
+            calc.Calculate();
 
             form1 = new groupedRowX(databaseX);
             form2 = new groupedRowY(databaseY);

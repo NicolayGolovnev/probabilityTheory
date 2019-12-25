@@ -148,7 +148,6 @@ namespace Zaychik
             textBox_Hx.Text = String.Format("{0:0.00}", Convert.ToString(Hx));
 
             grph = new Graphics(1, dataIntervals, dataPoligon, dataGist, dataAverage, dataEmpiric, Hx);
-
             int k = (int)dataAverage[3];
             point = new pointEstimates(1, k, dataAverage, Hx, dataFrequency);
 
@@ -176,6 +175,9 @@ namespace Zaychik
             inter.ShowDialog();
         }
 
-        
+        private void button_hypothesis_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

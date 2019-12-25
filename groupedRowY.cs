@@ -149,7 +149,6 @@ namespace Zaychik
             textBox_Hx.Text = String.Format("{0:0.00}", Convert.ToString(Hy));
 
             grph = new Graphics(1, dataIntervals, dataPoligon, dataGist, dataAverage, dataEmpiric, Hy);
-
             int k = (int)dataAverage[3];
             point = new pointEstimates(2, k, dataAverage, Hy, dataFrequency);
 

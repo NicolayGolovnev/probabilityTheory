@@ -229,6 +229,7 @@
             this.button_hypothesis.TabIndex = 16;
             this.button_hypothesis.Text = "Проверка гипотезы";
             this.button_hypothesis.UseVisualStyleBackColor = true;
+            this.button_hypothesis.Click += new System.EventHandler(this.button_hypothesis_Click);
             // 
             // button_confidenceIntervals
             // 
