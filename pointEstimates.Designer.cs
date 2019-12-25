@@ -51,6 +51,10 @@
             // 
             // marks
             // 
+            this.marks.AllowUserToAddRows = false;
+            this.marks.AllowUserToDeleteRows = false;
+            this.marks.AllowUserToResizeColumns = false;
+            this.marks.AllowUserToResizeRows = false;
             this.marks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.marks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.marks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -64,7 +68,7 @@
             this.marks.RowHeadersVisible = false;
             this.marks.RowHeadersWidth = 62;
             this.marks.RowTemplate.Height = 28;
-            this.marks.Size = new System.Drawing.Size(836, 292);
+            this.marks.Size = new System.Drawing.Size(836, 340);
             this.marks.TabIndex = 0;
             // 
             // i
@@ -100,7 +104,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 327);
+            this.label1.Location = new System.Drawing.Point(12, 375);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 1;
@@ -109,7 +113,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 366);
+            this.label2.Location = new System.Drawing.Point(12, 414);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 2;
@@ -118,7 +122,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 399);
+            this.label3.Location = new System.Drawing.Point(12, 447);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 20);
             this.label3.TabIndex = 3;
@@ -126,42 +130,42 @@
             // 
             // textBox_uAvg
             // 
-            this.textBox_uAvg.Location = new System.Drawing.Point(149, 324);
+            this.textBox_uAvg.Location = new System.Drawing.Point(148, 372);
             this.textBox_uAvg.Name = "textBox_uAvg";
             this.textBox_uAvg.Size = new System.Drawing.Size(100, 26);
             this.textBox_uAvg.TabIndex = 4;
             // 
             // textBox_uAvgTwice
             // 
-            this.textBox_uAvgTwice.Location = new System.Drawing.Point(149, 363);
+            this.textBox_uAvgTwice.Location = new System.Drawing.Point(148, 411);
             this.textBox_uAvgTwice.Name = "textBox_uAvgTwice";
             this.textBox_uAvgTwice.Size = new System.Drawing.Size(100, 26);
             this.textBox_uAvgTwice.TabIndex = 5;
             // 
             // textBox_SuTwice
             // 
-            this.textBox_SuTwice.Location = new System.Drawing.Point(149, 399);
+            this.textBox_SuTwice.Location = new System.Drawing.Point(148, 447);
             this.textBox_SuTwice.Name = "textBox_SuTwice";
             this.textBox_SuTwice.Size = new System.Drawing.Size(100, 26);
             this.textBox_SuTwice.TabIndex = 6;
             // 
             // textBox_Sx
             // 
-            this.textBox_Sx.Location = new System.Drawing.Point(604, 399);
+            this.textBox_Sx.Location = new System.Drawing.Point(603, 447);
             this.textBox_Sx.Name = "textBox_Sx";
             this.textBox_Sx.Size = new System.Drawing.Size(100, 26);
             this.textBox_Sx.TabIndex = 12;
             // 
             // textBox_SxTwice
             // 
-            this.textBox_SxTwice.Location = new System.Drawing.Point(604, 363);
+            this.textBox_SxTwice.Location = new System.Drawing.Point(603, 411);
             this.textBox_SxTwice.Name = "textBox_SxTwice";
             this.textBox_SxTwice.Size = new System.Drawing.Size(100, 26);
             this.textBox_SxTwice.TabIndex = 11;
             // 
             // textBox_xAvg
             // 
-            this.textBox_xAvg.Location = new System.Drawing.Point(604, 324);
+            this.textBox_xAvg.Location = new System.Drawing.Point(603, 372);
             this.textBox_xAvg.Name = "textBox_xAvg";
             this.textBox_xAvg.Size = new System.Drawing.Size(100, 26);
             this.textBox_xAvg.TabIndex = 10;
@@ -169,7 +173,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(452, 399);
+            this.label6.Location = new System.Drawing.Point(451, 447);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 20);
             this.label6.TabIndex = 9;
@@ -178,7 +182,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(452, 366);
+            this.label5.Location = new System.Drawing.Point(451, 414);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 20);
             this.label5.TabIndex = 8;
@@ -187,7 +191,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(452, 327);
+            this.label4.Location = new System.Drawing.Point(451, 375);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 20);
             this.label4.TabIndex = 7;
@@ -197,7 +201,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(868, 450);
+            this.ClientSize = new System.Drawing.Size(868, 488);
             this.Controls.Add(this.textBox_Sx);
             this.Controls.Add(this.textBox_SxTwice);
             this.Controls.Add(this.textBox_xAvg);

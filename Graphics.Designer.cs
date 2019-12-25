@@ -33,7 +33,6 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart_Poligon = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart_Gist = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -69,7 +68,7 @@
             series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Diamond;
             series1.Name = "nᵢ / n";
             this.chart_Poligon.Series.Add(series1);
-            this.chart_Poligon.Size = new System.Drawing.Size(376, 300);
+            this.chart_Poligon.Size = new System.Drawing.Size(440, 440);
             this.chart_Poligon.TabIndex = 0;
             this.chart_Poligon.Text = "chart_Poligon";
             // 
@@ -88,7 +87,7 @@
             chartArea2.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             chartArea2.Name = "ChartArea1";
             this.chart_Gist.ChartAreas.Add(chartArea2);
-            this.chart_Gist.Location = new System.Drawing.Point(440, 49);
+            this.chart_Gist.Location = new System.Drawing.Point(505, 49);
             this.chart_Gist.Name = "chart_Gist";
             this.chart_Gist.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
             series2.ChartArea = "ChartArea1";
@@ -96,18 +95,19 @@
             series2.IsVisibleInLegend = false;
             series2.Name = "nᵢ / (n ∙ h)";
             this.chart_Gist.Series.Add(series2);
-            this.chart_Gist.Size = new System.Drawing.Size(300, 300);
+            this.chart_Gist.Size = new System.Drawing.Size(440, 440);
             this.chart_Gist.TabIndex = 1;
             this.chart_Gist.Text = "chart2";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(67, 26);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(198, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.Size = new System.Drawing.Size(104, 25);
             this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.label1.Text = "Полигон:";
             // 
             // chart_Empiric
             // 
@@ -124,47 +124,46 @@
             chartArea3.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             chartArea3.Name = "ChartArea1";
             this.chart_Empiric.ChartAreas.Add(chartArea3);
-            legend1.Name = "Legend1";
-            this.chart_Empiric.Legends.Add(legend1);
-            this.chart_Empiric.Location = new System.Drawing.Point(206, 442);
+            this.chart_Empiric.Location = new System.Drawing.Point(973, 49);
             this.chart_Empiric.Name = "chart_Empiric";
             this.chart_Empiric.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
             series3.BorderWidth = 2;
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
             series3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            series3.Legend = "Legend1";
             series3.MarkerColor = System.Drawing.Color.Red;
             series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Diamond;
             series3.Name = "∑(nᵢ / n)";
             this.chart_Empiric.Series.Add(series3);
-            this.chart_Empiric.Size = new System.Drawing.Size(508, 300);
+            this.chart_Empiric.Size = new System.Drawing.Size(440, 440);
             this.chart_Empiric.TabIndex = 3;
             this.chart_Empiric.Text = "chart1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(519, 25);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(662, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.Size = new System.Drawing.Size(159, 25);
             this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
+            this.label2.Text = "Гистограмма:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(262, 391);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(983, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
+            this.label3.Size = new System.Drawing.Size(420, 25);
             this.label3.TabIndex = 5;
-            this.label3.Text = "label3";
+            this.label3.Text = "Эмпирическая функция распределения";
             // 
             // Graphics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(966, 776);
+            this.ClientSize = new System.Drawing.Size(1435, 510);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.chart_Empiric);
