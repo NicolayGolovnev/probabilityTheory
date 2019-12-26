@@ -12,7 +12,6 @@ C:\Users\kolya\Desktop\Zaychik\obj\Debug\Zaychik.Graphics.resources
 C:\Users\kolya\Desktop\Zaychik\obj\Debug\Zaychik.groupedRowY.resources
 C:\Users\kolya\Desktop\Zaychik\obj\Debug\Zaychik.pointEstimates.resources
 C:\Users\kolya\Desktop\Zaychik\obj\Debug\Zaychik.confidenceIntervals.resources
-C:\Users\kolya\Desktop\Zaychik\obj\Debug\Zaychik.Hipotesy.resources
 C:\Users\kolya\Desktop\Zaychik\obj\Debug\Zaychik.correlationTable.resources
 C:\Users\kolya\Desktop\Zaychik\obj\Debug\Zaychik.HipotesyX.resources
 C:\Users\kolya\Desktop\Zaychik\obj\Debug\Zaychik.regressionChart.resources

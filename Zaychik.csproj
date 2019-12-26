@@ -78,12 +78,6 @@
     <Compile Include="groupedRowX.Designer.cs">
       <DependentUpon>groupedRowX.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hipotesy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Hipotesy.Designer.cs">
-      <DependentUpon>Hipotesy.cs</DependentUpon>
-    </Compile>
     <Compile Include="HypotesyX.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,9 +119,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="groupedRowX.resx">
       <DependentUpon>groupedRowX.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Hipotesy.resx">
-      <DependentUpon>Hipotesy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HypotesyX.resx">
       <DependentUpon>HypotesyX.cs</DependentUpon>
