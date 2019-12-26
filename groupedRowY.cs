@@ -169,17 +169,23 @@ namespace Zaychik
 
         private void button_pointEstimates_Click(object sender, EventArgs e)
         {
+            int k = (int)dataAverage[3];
+            point = new pointEstimates(2, k, dataAverage, Hy, dataFrequency);
             point.Show();
         }
 
         private void button_hypothesis_Click(object sender, EventArgs e)
         {
+            hip = new HipotesyX();
             hip.doY = true;
             hip.Show();
         }
 
         private void button_confidenceIntervals_Click(object sender, EventArgs e)
         {
+            int k = (int)dataAverage[3];
+            point = new pointEstimates(2, k, dataAverage, Hy, dataFrequency);
+            inter = new confidenceIntervals(2, point);
             inter.Show();
         }
     }

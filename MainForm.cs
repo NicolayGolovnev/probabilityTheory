@@ -85,11 +85,13 @@ namespace Zaychik
 
         private void групированнаяРядToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            form1 = new groupedRowX(databaseX);
             form1.Show();
         }
 
         private void групированныйРядДляYToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            form2 = new groupedRowY(databaseY);
             form2.Show();
         }
 
