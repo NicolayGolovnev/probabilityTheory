@@ -164,23 +164,23 @@ namespace Zaychik
 
             //создаем форму графика
             Graphics grph = new Graphics(2, dataIntervals, dataPoligon, dataGist, dataAverage, dataEmpiric, Hy);
-            grph.ShowDialog();
+            grph.Show();
         }
 
         private void button_pointEstimates_Click(object sender, EventArgs e)
         {
-            point.ShowDialog();
+            point.Show();
         }
 
         private void button_hypothesis_Click(object sender, EventArgs e)
         {
             hip.doY = true;
-            hip.ShowDialog();
+            hip.Show();
         }
 
         private void button_confidenceIntervals_Click(object sender, EventArgs e)
         {
-            inter.ShowDialog();
+            inter.Show();
         }
     }
 }

@@ -1,0 +1,17 @@
+C:\Users\kolya\Desktop\Zaychik\bin\Release\Zaychik.exe.config
+C:\Users\kolya\Desktop\Zaychik\bin\Release\Zaychik.exe
+C:\Users\kolya\Desktop\Zaychik\bin\Release\Zaychik.pdb
+C:\Users\kolya\Desktop\Zaychik\obj\Release\Zaychik.csprojAssemblyReference.cache
+C:\Users\kolya\Desktop\Zaychik\obj\Release\Zaychik.confidenceIntervals.resources
+C:\Users\kolya\Desktop\Zaychik\obj\Release\Zaychik.correlationTable.resources
+C:\Users\kolya\Desktop\Zaychik\obj\Release\Zaychik.Graphics.resources
+C:\Users\kolya\Desktop\Zaychik\obj\Release\Zaychik.groupedRowY.resources
+C:\Users\kolya\Desktop\Zaychik\obj\Release\Zaychik.groupedRowX.resources
+C:\Users\kolya\Desktop\Zaychik\obj\Release\Zaychik.HipotesyX.resources
+C:\Users\kolya\Desktop\Zaychik\obj\Release\Zaychik.MainForm.resources
+C:\Users\kolya\Desktop\Zaychik\obj\Release\Zaychik.pointEstimates.resources
+C:\Users\kolya\Desktop\Zaychik\obj\Release\Zaychik.Properties.Resources.resources
+C:\Users\kolya\Desktop\Zaychik\obj\Release\Zaychik.regressionChart.resources
+C:\Users\kolya\Desktop\Zaychik\obj\Release\Zaychik.csproj.GenerateResource.cache
+C:\Users\kolya\Desktop\Zaychik\obj\Release\Zaychik.exe
+C:\Users\kolya\Desktop\Zaychik\obj\Release\Zaychik.pdb

@@ -161,23 +161,23 @@ namespace Zaychik
             //Для гистограммы - интервалы и dataGist
             //Для эмпирик функ - интервалы и dataEmpiric
             //grph = new Graphics(1, dataIntervals, dataPoligon, dataGist, dataAverage, dataEmpiric, Hx);
-            grph.ShowDialog();
+            grph.Show();
         }
 
         private void button_pointEstimates_Click(object sender, EventArgs e)
         {
             //point = new pointEstimates(1, k, dataAverage, Hx, dataFrequency);
-            point.ShowDialog();
+            point.Show();
         }
 
         private void button_confidenceIntervals_Click(object sender, EventArgs e)
         {
-            inter.ShowDialog();
+            inter.Show();
         }
 
         private void button_hypothesis_Click(object sender, EventArgs e)
         {
-            hip.ShowDialog();
+            hip.Show();
         }
     }
 }
